@@ -1,0 +1,88 @@
+/*
+ * We need to make sure that the outline border is visible, even on top of peek
+ * hole annotations.
+ */
+.PSPDFKit-Selection-Outline-Back {
+  z-index: 1000;
+}
+
+.Peephole-Top,
+.Peephole-Bottom,
+.Peephole-Left,
+.Peephole-Right,
+.Peephole-TopLeft,
+.Peephole-TopRight,
+.Peephole-BottomLeft,
+.Peephole-BottomRight {
+  position: absolute;
+  background-color: black;
+  top: -10000%;
+  left: -10000%;
+  right: -10000%;
+  bottom: -10000%;
+}
+
+[data-is-dragging-or-resizing] .Peephole-Top,
+[data-is-dragging-or-resizing] .Peephole-Bottom,
+[data-is-dragging-or-resizing] .Peephole-Left,
+[data-is-dragging-or-resizing] .Peephole-Right,
+[data-is-dragging-or-resizing] .Peephole-TopLeft,
+[data-is-dragging-or-resizing] .Peephole-TopRight,
+[data-is-dragging-or-resizing] .Peephole-BottomLeft,
+[data-is-dragging-or-resizing] .Peephole-BottomRight {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.Peephole-Top {
+  bottom: 100%;
+  left: 0;
+  right: 0;
+}
+
+.Peephole-Bottom {
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.Peephole-Left {
+  right: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.Peephole-Right {
+  left: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.Peephole-TopLeft {
+  bottom: 100%;
+  right: 100%;
+}
+
+.Peephole-TopRight {
+  bottom: 100%;
+  left: 100%;
+}
+
+.Peephole-BottomLeft {
+  right: 100%;
+  top: 100%;
+}
+
+.Peephole-BottomRight {
+  left: 100%;
+  top: 100%;
+}
+
+.Peephole-Center {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
